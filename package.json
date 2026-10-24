@@ -1,0 +1,47 @@
+{
+  "name": "pi-domino-expert",
+  "version": "0.1.0",
+  "description": "Notes/Domino Expert AI assistant for HCL Notes/Domino programming — LotusScript, Java, XPages, Formula Language, REST/KEEP, admin tasks",
+  "type": "module",
+  "main": "./index.ts",
+  "keywords": [
+    "pi",
+    "pi-package",
+    "pi-extension"
+  ],
+  "author": "mastnacek",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mastnacek/pi-domino-expert.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mastnacek/pi-domino-expert/issues"
+  },
+  "files": [
+    "README.md",
+    "package.json",
+    "index.ts",
+    "src",
+    "docs",
+    "tsconfig.json",
+    "tsconfig.test.json",
+    "test"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-agent-core": "*",
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "tsc -p tsconfig.test.json && node --test dist/test/*.test.js"
+  }
+}
